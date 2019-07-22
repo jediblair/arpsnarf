@@ -52,7 +52,7 @@ def main(argv):
                 " VALUES (%s, %s, %s, %s, %s, %s)")
         global cnx
         cnx = mysql.connector.connect(user='arpuser', password='arppass',
-                host='mysql01.example.net', database='arpentries')
+                host='mysql01.example.net', database='arpentries',buffered=True)
 
 
         for (index,value) in macs:
